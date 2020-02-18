@@ -16,7 +16,7 @@ matrix:
         - required
       before_install:
         - sudo apt-get purge python-openssl
-        - sudo apt-get install python-dev python3-dev  build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
+        - sudo apt-get install libgnutls28-dev python-dev python3-dev  build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
         - sudo pip install pyopenssl
         - psql postgres -c "CREATE USER owtf_db_user WITH PASSWORD 'jgZKW33Q+HZk8rqylZxaPg1lbuNGHJhgzsq3gBKV32g=';"
         - psql postgres -c "CREATE DATABASE owtf_db WITH OWNER owtf_db_user ENCODING 'utf-8' TEMPLATE template0;"
